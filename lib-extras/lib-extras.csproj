@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8BC9742-848E-4834-B1B6-1CE0A4784D9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <RootNamespace>lib_extras</RootNamespace>
+    <AssemblyName>lib-extras</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\lib-extras.d.ts" />
+    <Content Include="bin\lib-extras.js" />
+    <None Include="bin\lib-extras.js.map" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="Extensions\ArrayExtensions\ArrayPrototype.ts" />
+    <TypeScriptCompile Include="ES6\ArrayPolyfills.ts" />
+    <TypeScriptCompile Include="ES6\StringPolyfills.ts" />
+    <TypeScriptCompile Include="Extensions\Global.ts" />
+    <TypeScriptCompile Include="Extensions\ObjectExtensions\ObjectStatic.ts" />
+    <TypeScriptCompile Include="Extensions\ObjectExtensions\ObjectComparer.ts" />
+    <TypeScriptCompile Include="Extensions\StringExtensions\StringComparer.ts" />
+    <TypeScriptCompile Include="Extensions\StringExtensions\StringStatic.ts" />
+    <TypeScriptCompile Include="Extensions\StringExtensions\StringPrototype.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptGeneratesDeclarations>true</TypeScriptGeneratesDeclarations>
+    <TypeScriptModuleKind>none</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptOutDir>
+    </TypeScriptOutDir>
+    <TypeScriptOutFile>C:\Users\ryjansen\Documents\Visual Studio 2013\Projects\lib-extras\lib-extras\bin\lib-extras.js</TypeScriptOutFile>
+    <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
