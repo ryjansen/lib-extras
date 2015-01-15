@@ -38,11 +38,11 @@ module lib.extras.ES6.StringPolyfills {
             count = Math.floor(count);
 
             if (count < 0) {
-                new RangeError("repeat count must be non-negative");
+                throw new RangeError("repeat count must be non-negative");
             }
 
-            if (count == Infinity) {
-                new RangeError("repeat count must be less than infinity");
+            if (count === Infinity) {
+                throw new RangeError("repeat count must be less than infinity");
             }
 
             var subjectString = this.toString();
