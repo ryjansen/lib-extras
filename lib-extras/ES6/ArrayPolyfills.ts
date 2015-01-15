@@ -47,7 +47,7 @@ module lib.extras.ES6.ArrayPolyfills {
                 }
             }
 
-            return undefined;
+            return -1;
         }
     }
 

@@ -61,7 +61,7 @@
     <Content Include="Scripts\jasmine\console.js" />
     <Content Include="Scripts\jasmine\jasmine-html.js" />
     <Content Include="Scripts\jasmine\jasmine.js" />
-    <Content Include="Scripts\_generated\tests.js" />
+    <Content Include="Scripts\_generated\lib-extras-tests.js" />
     <Content Include="Views\Jasmine\SpecRunner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -86,9 +86,19 @@
       <Link>Scripts\typings\lib-extras\lib-extras.d.ts</Link>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="Tests\Extensions\ArrayExtensions\ArrayPrototype.test.ts" />
+    <TypeScriptCompile Include="Tests\Extensions\ObjectExtensions\ObjectStatic.test.ts" />
+    <TypeScriptCompile Include="Tests\Extensions\ObjectExtensions\ObjectComparer.test.ts" />
+    <TypeScriptCompile Include="Tests\Extensions\StringExtensions\StringPrototype.test.ts" />
     <TypeScriptCompile Include="Tests\Extensions\StringExtensions\StringComparer.test.ts" />
+    <TypeScriptCompile Include="Tests\Extensions\StringExtensions\StringStatic.test.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\lib-extras\lib-extras.csproj">
+      <Project>{e8bc9742-848e-4834-b1b6-1ce0a4784d9a}</Project>
+      <Name>lib-extras</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -98,7 +108,7 @@
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
     <TypeScriptNoImplicitAny>true</TypeScriptNoImplicitAny>
-    <TypeScriptOutFile>Scripts\_generated\tests.js</TypeScriptOutFile>
+    <TypeScriptOutFile>Scripts\_generated\lib-extras-tests.js</TypeScriptOutFile>
   </PropertyGroup>
   <Target Name="CopyLinkedContentFiles" BeforeTargets="Build">
     <Copy SourceFiles="%(Content.Identity)" DestinationFiles="%(Content.Link)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Condition="'%(Content.Link)' != ''" />

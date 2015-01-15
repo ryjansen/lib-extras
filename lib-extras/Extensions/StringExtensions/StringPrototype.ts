@@ -38,7 +38,7 @@ module lib.extras.Extensions.StringExtras {
     if (!String.prototype.format) {
         String.prototype.format = function (): string {
             var thisAsString: string = this,
-                args = Array.prototype.slice.apply(arguments, 1);
+                args = Array.prototype.slice.apply(arguments);
 
             var namedFormatSpecifierRegex = /\{[a-zA-Z$_\d]*\}/g,
                 numberedFormatSpecifierRegex = /\{(\d+)\}/g;
@@ -71,13 +71,13 @@ module lib.extras.Extensions.StringExtras {
 
     if (!String.prototype.equals) {
         String.prototype.equals = function (otherStr: string): boolean {
-            return StringStatic.equals(this, otherStr);
+            return StringEqualityComparer.default(this, otherStr);
         }
     }
 
     if (!String.prototype.equalsIgnoreCase) {
         String.prototype.equalsIgnoreCase = function (otherStr: string): boolean {
-            return StringStatic.equalsIgnoreCase(this, otherStr);
+            return StringEqualityComparer.ignoreCase(this, otherStr);
         }
     }
 }

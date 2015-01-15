@@ -2,6 +2,7 @@
     distinct(equalityComparer?: EqualityComparer<T>): T[];
     intersection(otherArray: T[], equalityComparer?: EqualityComparer<T>): T[];
     union(otherArray: T[], equalityComparer?: EqualityComparer<T>): T[];
+    stableSort<U>(property: (item: T) => U, comparer?: Comparer<U>): T[];
     sortBy<U>(property: (item: T) => U, comparer?: Comparer<U>): T[];
     sortByDescending<U>(property: (item: T) => U, comparer?: Comparer<U>): T[];
     toStringIndexable(key: (item: T) => string): StringIndexable<T>;
@@ -42,19 +43,7 @@ module lib.extras.Extensions.ArrayExtensions {
             var thisArrayCopy = this.slice(),
                 otherArrayCopy = otherArray.slice();
 
-            var result: T[] = thisArrayCopy.slice();
-
-            otherArrayCopy.forEach((item: T) => {
-                var resultAlreadyHasItem = result.find((existingItem: T) => {
-                    return equalityComparer(item, existingItem);
-                });
-
-                if (!resultAlreadyHasItem) {
-                    result.push(item);
-                }
-            });
-
-            return result;
+            return thisArrayCopy.concat(otherArrayCopy).distinct(equalityComparer);
         }
     }
 
@@ -77,7 +66,7 @@ module lib.extras.Extensions.ArrayExtensions {
                 }
             });
 
-            return result;
+            return result.distinct(equalityComparer);
         }
     }
 
