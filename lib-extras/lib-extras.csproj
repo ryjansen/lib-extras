@@ -32,6 +32,7 @@
     <TypeScriptCompile Include="Extensions\StringExtensions\StringComparer.ts" />
     <TypeScriptCompile Include="Extensions\StringExtensions\StringStatic.ts" />
     <TypeScriptCompile Include="Extensions\StringExtensions\StringPrototype.ts" />
+    <TypeScriptCompile Include="Utilities.ts" />
   </ItemGroup>
   <PropertyGroup>
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
