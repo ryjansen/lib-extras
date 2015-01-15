@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>lib-extras</id>
+    <version>$version$</version>
+    <title>lib-extras</title>
+    <authors>Ryan Jansen, Mark Overholt</authors>
+    <owners>Ryan Jansen</owners>
+    <projectUrl>https://github.com/ryjansen/lib-extras</projectUrl>
+    <licenseUrl>https://github.com/ryjansen/lib-extras/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>lib-extras provides a set of common utility functions for TypeScript and JavaScript.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright &#x00A9; Ryan Jansen.  All rights reserved.</copyright>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="lib-extras\bin\lib-extras.js" target="Content\Scripts\lib-extras\" />
+    <file src="lib-extras\bin\lib-extras.d.ts" target="Content\Scripts\typings\lib-extras\" />
+  </files>
+</package>
