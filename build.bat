@@ -26,4 +26,5 @@ mkdir Build
 if exist "%SRCDIR%\%PROJNAME%.nuspec" (
   echo.
   %nuget% pack "%SRCDIR%\%PROJNAME%.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
+  %nuget% pack "%SRCDIR%\%PROJNAME%.TypeScript.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
 )

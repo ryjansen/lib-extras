@@ -2,7 +2,6 @@
     distinct(equalityComparer?: EqualityComparer<T>): T[];
     intersection(otherArray: T[], equalityComparer?: EqualityComparer<T>): T[];
     union(otherArray: T[], equalityComparer?: EqualityComparer<T>): T[];
-    stableSort<U>(property: (item: T) => U, comparer?: Comparer<U>): T[];
     sortBy<U>(property: (item: T) => U, comparer?: Comparer<U>): T[];
     sortByDescending<U>(property: (item: T) => U, comparer?: Comparer<U>): T[];
     toStringIndexable(key: (item: T) => string): StringIndexable<T>;

@@ -91,6 +91,7 @@
     <TypeScriptCompile Include="Tests\Extensions\StringExtensions\StringPrototype.test.ts" />
     <TypeScriptCompile Include="Tests\Extensions\StringExtensions\StringComparer.test.ts" />
     <TypeScriptCompile Include="Tests\Extensions\StringExtensions\StringStatic.test.ts" />
+    <TypeScriptCompile Include="Tests\Utilities.test.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\lib-extras\lib-extras.csproj">
