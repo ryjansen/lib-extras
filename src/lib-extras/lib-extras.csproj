@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <TypeScriptCompile Include="ES6\FunctionPolyfills.ts" />
     <TypeScriptCompile Include="Extensions\ArrayExtensions\ArrayPrototype.ts" />
     <TypeScriptCompile Include="ES6\ArrayPolyfills.ts" />
     <TypeScriptCompile Include="ES6\StringPolyfills.ts" />

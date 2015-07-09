@@ -50,8 +50,8 @@
         });
 
         it("should throw RangeError for bad count values", () => {
-            expect(() => { "abc".repeat(-1); }).toThrow(new RangeError("repeat count must be non-negative"));
-            expect(() => { "abc".repeat(Infinity); }).toThrow(new RangeError("repeat count must be less than infinity"));
+            expect(() => { "abc".repeat(-1); }).toThrow();
+            expect(() => { "abc".repeat(Infinity); }).toThrow();
         });
     });
 });

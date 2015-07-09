@@ -18,7 +18,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>1.1</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup>
     <DebugSymbols>true</DebugSymbols>
@@ -83,6 +83,7 @@
       <Link>Scripts\typings\lib-extras\lib-extras.d.ts</Link>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="Tests\ES6\FunctionPolyfills.test.ts" />
     <TypeScriptCompile Include="Tests\ES6\StringPolyfills.test.ts" />
     <TypeScriptCompile Include="Tests\ES6\ArrayPolyfills.test.ts" />
     <TypeScriptCompile Include="Tests\Extensions\ArrayExtensions\ArrayPrototype.test.ts" />
