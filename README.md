@@ -5,7 +5,10 @@ lib-extras provides a set of common utility functions for TypeScript and JavaScr
 
 # Extras
 
-### ES6
+### ES Polyfills
+
+* Function.prototype
+  * bind()
 
 * Array.prototype
   * includes()
